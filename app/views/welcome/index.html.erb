@@ -30,35 +30,30 @@
 <div class="jumbotron">
   <div class="container">
   	<div class="row">
-	  <div class="col-md-7">&nbsp;</div>
-	  <div class="col-md-5 amb-hero-form">
+	  <div class="col-md-6">&nbsp;</div>
+	  <div class="col-md-6 amb-hero-form">
 
-    <h1 class="cover-heading" style="font-size:40px;">Share the <strike>road</strike> love</h1>
-    <p>To make an AboutMyBike page when the app is ready....</p>
+    <h1 class="cover-heading">Share the <strike>road</strike> love</h1>
+    <p class="lead">To be alerted when <mark class="text-nowrap">About My Bike</mark> is ready...</p>
 
-  	<form class="signup">
-  	  <div class="form-group"><!-- what's a form group for? -->
-
+    <form class="signup">
+      <div class="form-group">
         <input type="email" name="email" class="form-control" placeholder="Enter your email">
-        <span class="small">(We will not share your email)</span>
-
+         <small>(We will not share your email)</small>
       </div>
 
-      <div class="form-group"><!-- what's a form group for? -->
-
-        <input id="early-access-request" name="early-access-request" type="checkbox"> 
-        <label for="early-access-request">I'd like to request early access to AboutMyBike</label>
-        <!-- error: a photo of your bike is required for early access. Either add a photo or uncheck your request for early access -->
-
-
+      <div class="checkbox early-access-request-group">
+        <label>
+          <input type="checkbox" id="early-access-request" name="early-access-request"> I'd like to request early access
+        </label>
       </div>
 
-      <div class="form-group" id="bike-photo-group"><!-- what's a form group for? -->
+      <div class="form-group" id="bike-photo-upload">
         <label for="preview-request">Upload a photo of your bike</label>
         <input id="bike-photo" name="bike-photo" type="file"> 
       </div>
 
-      <button type="submit" class="btn btn-success">Let me know</button>
+      <button type="submit" class="btn btn-success amb-early-access-submit">Send me an alert</button>
   	</form>
 
 	  </div>
@@ -68,15 +63,13 @@
 
 <div class="container">
   <!-- Example row of columns -->
-  <h2>To make an AboutMyBike page:</h2>
+  <h2>To make an <mark class="text-nowrap">About My Bike</mark> page</h2>
   <div class="row">
-    <div class="col-md-4">
-      <h3>1. Sincerely like your own bike.</h3>
-    </div>
-    <div class="col-md-4">
-      <h3>2. Upload a decent photo of your bike.</h3>
-   </div>
-      <h3>3. Add as much or as little details as you'd like.</h3>
+   <dl class="how-to">
+    <dt class="col-md-4 step-1">Sincerely like your own bike</dt>
+    <dt class="col-md-4">Upload a decent photo of your bike</dt>
+    <dt class="col-md-4">Add as much or as little detail as you'd like</dt>
+   </dl>
   </div>
 
   <hr>
@@ -85,15 +78,4 @@
     <p>&copy;2016 AboutMyBike.com <a href="https://twitter.com/arobson">@arobson</a></p>
   </footer>
 </div> <!-- /container -->
-
-<script>
-
-$(document).ready(function() {
-  console.log('ready');
-  $('#early-access-request').click(function() {
-    $('#bike-photo-group').show();
-  });
-});
-
-</script>
 
