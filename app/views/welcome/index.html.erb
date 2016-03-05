@@ -1,0 +1,99 @@
+<!--
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Project name</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <form class="navbar-form navbar-right">
+        <div class="form-group">
+          <input type="text" placeholder="Email" class="form-control">
+        </div>
+        <div class="form-group">
+          <input type="password" placeholder="Password" class="form-control">
+        </div>
+        <button type="submit" class="btn btn-success">Sign in</button>
+      </form>
+    </div>
+  </div>
+</nav>
+
+-->
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+  	<div class="row">
+	  <div class="col-md-7">&nbsp;</div>
+	  <div class="col-md-5 amb-hero-form">
+
+    <h1 class="cover-heading" style="font-size:40px;">Share the <strike>road</strike> love</h1>
+    <p>To make an AboutMyBike page when the app is ready....</p>
+
+  	<form class="signup">
+  	  <div class="form-group"><!-- what's a form group for? -->
+
+        <input type="email" name="email" class="form-control" placeholder="Enter your email">
+        <span class="small">(We will not share your email)</span>
+
+      </div>
+
+      <div class="form-group"><!-- what's a form group for? -->
+
+        <input id="early-access-request" name="early-access-request" type="checkbox"> 
+        <label for="early-access-request">I'd like to request early access to AboutMyBike</label>
+        <!-- error: a photo of your bike is required for early access. Either add a photo or uncheck your request for early access -->
+
+
+      </div>
+
+      <div class="form-group" id="bike-photo-group"><!-- what's a form group for? -->
+        <label for="preview-request">Upload a photo of your bike</label>
+        <input id="bike-photo" name="bike-photo" type="file"> 
+      </div>
+
+      <button type="submit" class="btn btn-success">Let me know</button>
+  	</form>
+
+	  </div>
+	</div>
+  </div>
+</div>
+
+<div class="container">
+  <!-- Example row of columns -->
+  <h2>To make an AboutMyBike page:</h2>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>1. Sincerely like your own bike.</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>2. Upload a decent photo of your bike.</h3>
+   </div>
+      <h3>3. Add as much or as little details as you'd like.</h3>
+  </div>
+
+  <hr>
+
+  <footer>
+    <p>&copy;2016 AboutMyBike.com <a href="https://twitter.com/arobson">@arobson</a></p>
+  </footer>
+</div> <!-- /container -->
+
+<script>
+
+$(document).ready(function() {
+  console.log('ready');
+  $('#early-access-request').click(function() {
+    $('#bike-photo-group').show();
+  });
+});
+
+</script>
+
