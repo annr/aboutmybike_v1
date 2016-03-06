@@ -1,0 +1,15 @@
+<h1>Signups</h1>
+ 
+<table>
+  <tr>
+    <th>Email</th>
+    <th>Created At</th>
+  </tr>
+ 
+  <% @signups.each do |signup| %>
+    <tr>
+      <td><%= signup.email %></td>
+      <td><%= signup.created_at %></td>
+    </tr>
+  <% end %>
+</table>
