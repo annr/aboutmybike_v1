@@ -14,7 +14,12 @@
   padding: 20px;
   border-radius: 2px;
 }
+
 #bike-photo-upload {
+  visibility: hidden;
+}
+
+.early-access-request-group {
   visibility: hidden;
 }
 
@@ -61,8 +66,15 @@ dl.how-to dt:before {
 dl.how-to dt.step-1:before {
   left: 8px;
 }
-/*
-@media (min-width: 768px) {
+
+.submit-success {
+  color: #ff3366;
+  display: inline;
+  font-size: 18px;
+  text-shadow: 0 1px 3px rgba(255,255,255,1.0);
+}
+
+@media (max-width: 1025px) {
   .amb-hero-form h1 {
     font-size: 30px;
   }
@@ -74,7 +86,7 @@ dl.how-to dt.step-1:before {
     margin-left: 10px;
   }
   dl.how-to dt {
-    margin-left: 24px;
+    margin-left: 0;
     padding-left: 36px;
     line-height: 170%;
   }
@@ -86,5 +98,4 @@ dl.how-to dt.step-1:before {
     left: 0;
   }
 }
-*/
 

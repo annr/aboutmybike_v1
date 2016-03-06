@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: aboutmybike_development
+  database: aboutmybike_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: aboutmybike_production
+  database: aboutmybike
   username: aboutmybike
   password: <%= ENV['ABOUTMYBIKE_DATABASE_PASSWORD'] %>
