@@ -36,10 +36,9 @@
     <h1 class="cover-heading">Share the <strike>road</strike> love</h1>
     <p class="lead">To be alerted when <mark class="text-nowrap">About My Bike</mark> is ready...</p>
 
-    <form id="email-alert-signup">
-      <input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>" />
+    <form class="signup">
       <div class="form-group">
-        <input type="email" name="signup[email]" id="signup_email" class="form-control" placeholder="Enter your email" required="true">
+        <input type="email" name="email" class="form-control" placeholder="Enter your email">
          <small>(We will not share your email)</small>
       </div>
 
@@ -54,10 +53,7 @@
         <input id="bike-photo" name="bike-photo" type="file"> 
       </div>
 
-      <div class="form-group">
-        <button type="submit" name="commit" class="btn btn-success amb-early-access-submit">Send me an alert</button>
-        &nbsp;<div class="submit-success"></div>
-      </div>
+      <button type="submit" class="btn btn-success amb-early-access-submit">Send me an alert</button>
   	</form>
 
 	  </div>
@@ -67,7 +63,7 @@
 
 <div class="container">
   <!-- Example row of columns -->
-  <h2>To make an <span class="text-nowrap">About My Bike</span> page</h2>
+  <h2>To make an <mark class="text-nowrap">About My Bike</mark> page</h2>
   <div class="row">
    <dl class="how-to">
     <dt class="col-md-4 step-1">Sincerely like your own bike</dt>
@@ -82,46 +78,4 @@
     <p>&copy;2016 AboutMyBike.com <a href="https://twitter.com/arobson">@arobson</a></p>
   </footer>
 </div> <!-- /container -->
-
-<script>
-
-document.addEventListener("DOMContentLoaded", function(event) { 
-
-  $(document).ready(function() {
-    $('#early-access-request').click(function() {
-    if($('#bike-photo-upload').css('visibility') === 'visible') {
-        $('#bike-photo-upload').css('visibility', 'hidden');
-    } else {
-        $('#bike-photo-upload').css('visibility', 'visible');
-      }
-    });
-
-    $('#email-alert-signup').submit(function(event) {
-
-      event.preventDefault();
-
-      // validate
-      $.ajax({
-        type: "POST",
-        url: "/signups",
-        data: $(this).serialize(),
-        success: function(data) {
-          $('.submit-success').html('Thanks! We\'ll be in touch soon.');
-        },
-        error: function(data) {
-          $('.submit-success').html('Our apologies, something went wrong.');
-        }
-      });
-
-    });
-
-
-  });
-
-});
-
-
-
-
-</script>
 
