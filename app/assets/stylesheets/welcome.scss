@@ -15,11 +15,6 @@
   border-radius: 2px;
 }
 
-.jumbotron .amb-hero-form p.form-description {
-  margin-bottom: 10px;
-  margin-top: 5px;
-}
-
 #bike-photo-upload {
   visibility: hidden;
 }
@@ -29,7 +24,6 @@
 }
 
 .amb-hero-form h1 {
-  margin-bottom: 15px;
   font-size: 45px;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
   border-radius: 1px;
@@ -81,6 +75,10 @@ dl.how-to dt.step-1:before {
 }
 
 @media (max-width: 1025px) {
+  .amb-hero-form h1 {
+    font-size: 30px;
+  }
+
   h2 {
     font-size: 28px;
   }
