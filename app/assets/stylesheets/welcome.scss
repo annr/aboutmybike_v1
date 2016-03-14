@@ -3,87 +3,19 @@
  */
 .jumbotron {
   background-image: image-url("lowres_hero_art_wide.png");
-  background-repeat: no-repeat;
-  background-color: #d2dce8;
-
 }
 
 .amb-hero-form {
   background: image-url("pink_heart.png") no-repeat right top;
-  background-color: rgba(255,255,255,0.6);
-  padding: 20px;
-  border-radius: 2px;
-}
-#bike-photo-upload {
-  visibility: hidden;
 }
 
-.amb-hero-form h1 {
-  font-size: 45px;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  border-radius: 1px;
-}
-
-.amb-early-access-submit {
-	border-radius: 1px;
-}
-
-.early-access-request-group {
-  font-size: 16px;
-}
-
-h2 {
-  font-size: 32px;
-  font-weight: normal;
-  line-height: 150%;
-}
-
-dl.how-to {
-  counter-reset: my-counter;
-  font-size: 20px;
-  margin-top: 20px;
-}
-
-dl.how-to dt {
-  padding: 0 50px;
-  font-weight: normal;
-  margin-top: 16px;
-}
-dl.how-to dt:before {
-  content: counter(my-counter);
-  counter-increment: my-counter;
-  position: absolute;
-  left: 0;
-  top: -6px;
-  font: normal 70px/1 Sans-Serif;
-}
-
-dl.how-to dt.step-1:before {
-  left: 8px;
+.jumbotron h1 {
+  font-size: 50px;
 }
 /*
 @media (min-width: 768px) {
-  .amb-hero-form h1 {
-    font-size: 30px;
-  }
-
-  h2 {
-    font-size: 28px;
-  }
-  dl.how-to {
-    margin-left: 10px;
-  }
-  dl.how-to dt {
-    margin-left: 24px;
-    padding-left: 36px;
-    line-height: 170%;
-  }
-  dl.how-to dt:before {
-    top: 0;
-    font: normal 32px/1 Sans-Serif;
-  }
-  dl.how-to dt.step-1:before {
-    left: 0;
+  h1 {
+    font-size: 50px;
   }
 }
 */
