@@ -1,0 +1,38 @@
+{
+  "name": "aboutmybike",
+  "version": "1.0.0",
+  "description": "The best bike is the one you have.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "scss": "node-sass --output-style compressed -o dist/css src/scss",
+    "lint": "eslint src/components"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/annr/aboutmybike.git"
+  },
+  "keywords": [
+    "bikes",
+    "bicycles",
+    "bike_rides",
+    "bike_stories",
+    "custom_bikes"
+  ],
+  "author": "Ann Robson <nosbora@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/annr/aboutmybike/issues"
+  },
+  "homepage": "https://github.com/annr/aboutmybike#readme",
+  "devDependencies": {
+    "bootstrap": "^4.0.0-alpha.3",
+    "node-sass": "^3.8.0",
+    "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "lodash": "^3.6.0",
+    "react": "^15.3.1",
+    "react-dom": "^15.3.1"
+  }
+}
