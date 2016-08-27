@@ -1,0 +1,34 @@
+[
+  {
+    "username": "dmagdalena",
+    "photo_id": "bike1.jpg",
+    "style": "cruiser",
+    "brand": "Handsome",
+    "model": "Fredward",
+    "color" :"purple"
+  },
+  {
+    "username": "dmagdalena",
+    "photo_id": "bike2.jpg",
+    "style": "cruiser",
+    "brand": "Handsome",
+    "model": "Fredward",
+    "color" :"purple"
+  },
+  {
+    "username": "dmagdalena",
+    "photo_id": "bike3.jpg",
+    "style": "cruiser",
+    "brand": "Handsome",
+    "model": "Fredward",
+    "color" :"purple"
+  },
+  {
+    "username": "dmagdalena",
+    "photo_id": "bike4.jpg",
+    "style": "cruiser",
+    "brand": "Handsome",
+    "model": "Fredward",
+    "color" :"purple"
+  }
+]
