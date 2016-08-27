@@ -1,5 +1,10 @@
+var webpack = require("webpack");
+
 module.exports = {
-  entry: './src/js/app.js',
+  entry: {
+    app: "./src/js/app.js",
+    vendor: ["jquery", "lodash", "react", "react-dom"]
+  },
   output: {
     path: './dist',
     filename: 'app.bundle.js'
@@ -15,5 +20,8 @@ module.exports = {
         }
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin("vendor", "vendor.bundle.js")
+  ]
 }
