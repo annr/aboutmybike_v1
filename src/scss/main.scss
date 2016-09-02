@@ -1,15 +1,12 @@
+/*
 @import '../../node_modules/bootstrap/scss/bootstrap';
+*/
 @import 'variables';
 @import 'utilities';
-
-body {
-  background-color: $color-teal-base;
-}
 
 .foo {
   @include absolute(0, 0, auto, auto);
 }
 
-.Tour {
-  display: flex;
-}
+@import 'src/material-design-lite';
+
