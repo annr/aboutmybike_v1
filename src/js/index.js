@@ -21,7 +21,7 @@ class App extends React.Component {
       //     })}
       //   </div>
       // </div>
-      <h1>Hey</h1>
+      <span>Recently added</span>
     );
   }
 }

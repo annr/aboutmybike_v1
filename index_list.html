@@ -39,9 +39,126 @@
 
   </head>
 
-  <body>
+  <body class="mdl-demo mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+      <header class="mdl-layout__header mdl-layout__header--scroll mdl-color--primary">
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+          <img src="dist/images/logo.png" class="logo" width="295" height="53" alt="About My Bike">
+        </div>
+        <div class="mdl-layout--large-screen-only mdl-layout__header-row">
+        </div>
+        <div class="mdl-layout__tab-bar mdl-js-ripple-effect mdl-color--primary-dark">
+          <a href="#overview" class="mdl-layout__tab is-active">Home</a>
+<!--           <a href="#featured_bikes" class="mdl-layout__tab is-active">Featured bikes</a> -->
+          <!-- <a href="#recently_added" class="mdl-layout__tab">Recently added</a> --><!-- shows recently added or featured bikes. for now, recently added -->
+          <a href="#bikes" class="mdl-layout__tab">Bikes</a><!-- this will become a drop-down list of types. For now, it's a lame organization of bikes -->
+          <a href="#add" class="mdl-layout__tab">Add your bike</a>
+  <!--         <a href="#about" class="mdl-layout__tab">About</a>
+          <a href="#faq" class="mdl-layout__tab">FAQ</a> -->
+          <button class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored mdl-shadow--4dp mdl-color--accent" id="add">
+            <i class="material-icons" role="presentation">add</i>
+            <span class="visuallyhidden">Add</span>
+          </button>
+        </div>
+      </header>
 
-    <!-- <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script> -->
+      <main class="mdl-layout__content">
+
+      <div id="container">BOO</div>
+
+      <div class="mdl-layout__tab-panel is-active" id="overview">
+
+        <!--
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+            <i class="material-icons">play_circle_filled</i>
+          </header>
+          <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card__supporting-text">
+              <h4>Featured bikes</h4>
+              Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Nostrud in laboris labore nisi amet do dolor eu fugiat consectetur elit cillum esse.
+            </div>
+            <div class="mdl-card__actions">
+              <a href="#" class="mdl-button">See all featured bikes</a>
+            </div>
+          </div>
+
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn1" data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons">more_vert</i>
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 92.5097px; height: 92.5097px; transform: translate(-50%, -50%) translate(18px, 24px);"></span></span></button>
+          <div class="mdl-menu__container is-upgraded" style="right: 8px; top: 40px; width: 124px; height: 160px;"><div class="mdl-menu__outline mdl-menu--bottom-right" style="width: 124px; height: 160px;"></div>
+        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn1" data-upgraded=",MaterialMenu" style="clip: rect(0px 124px 0px 124px);">
+            <li class="mdl-menu__item" tabindex="-1">Lorem</li>
+            <li class="mdl-menu__item" disabled="" tabindex="-1">Ipsum</li>
+            <li class="mdl-menu__item" tabindex="-1">Dolor</li>
+          </ul>
+        </section>
+        -->
+
+        <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+          <div class="mdl-card mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+              <h4 class="mdl-cell mdl-cell--12-col">Recently added</h4>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <div class="section__circle-container__circle mdl-color--primary"></div>
+              </div>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Lorem ipsum dolor sit amet</h5>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <div class="section__circle-container__circle mdl-color--primary"></div>
+              </div>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Lorem ipsum dolor sit amet</h5>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+              </div>
+              <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                <div class="section__circle-container__circle mdl-color--primary"></div>
+              </div>
+              <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                <h5>Lorem ipsum dolor sit amet</h5>
+                Dolore ex deserunt aute fugiat aute nulla ea sunt aliqua nisi cupidatat eu. Duis nulla tempor do aute et eiusmod velit exercitation nostrud quis <a href="#">proident minim</a>.
+              </div>
+            </div>
+            <div class="mdl-card__actions">
+              <a href="#" class="mdl-button">See all bikes</a>
+            </div>
+          </div>
+
+          <!--
+          <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" id="btn2" data-upgraded=",MaterialButton,MaterialRipple">
+            <i class="material-icons">more_vert</i>
+          <span class="mdl-button__ripple-container"><span class="mdl-ripple is-animating" style="width: 92.5097px; height: 92.5097px; transform: translate(-50%, -50%) translate(22px, 12px);"></span></span></button>
+          <div class="mdl-menu__container is-upgraded" style="right: 8px; top: 40px; width: 124px; height: 160px;"><div class="mdl-menu__outline mdl-menu--bottom-right" style="width: 124px; height: 160px;"></div>
+           <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="btn2" data-upgraded=",MaterialMenu" style="clip: rect(0px 124px 0px 124px);">
+            <li class="mdl-menu__item" tabindex="-1">Fixed gear</li>
+            <li class="mdl-menu__item" disabled="" tabindex="-1">Road</li>
+            <li class="mdl-menu__item" tabindex="-1">Mountain</li>
+          </ul></div>
+
+        -->
+        </section>
+
+      </div>
+      <br><br>
+
+      <footer class="mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+          <div class="mdl-logo">About My Bike</div>
+          <ul class="mdl-mini-footer__link-list">
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Privacy & Terms</a></li>
+          </ul>
+        </div>
+      </footer>
+
+      </main>
+
+    </div>
+      <!-- <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script> -->
     <script src="vendor.bundle.js"></script>
     <script src="dist/mdl.bundle.js"></script>
     <script src="main.bundle.js"></script>
