@@ -7,9 +7,10 @@ module.exports = {
     vendor: ["jquery", "lodash", "react", "react-dom"]
   },
   output: {
-    path: './dist',
-    filename: "[name].bundle.js",
-    publicPath: "/assets/",
+    //path: './dist',
+    //filename: "[name].bundle.js",
+    //publicPath: "/assets/",
+    filename: "main.bundle.js"
   },
   module: {
     loaders: [
