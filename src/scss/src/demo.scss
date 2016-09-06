@@ -105,7 +105,7 @@ html, body {
   z-index: 999;
 }
 
-.mdl-demo .mdl-layout__content section:not(:last-of-type) {
+.mdl-demo .mdl-layout__content section {
   position: relative;
   margin-bottom: 48px;
 }
