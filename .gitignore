@@ -1,0 +1,4 @@
+/dist/
+.editorconfig
+.eslintrc
+/node_modules/
