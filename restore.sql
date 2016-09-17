@@ -44,7 +44,7 @@ CREATE TABLE bike (
     model text,
     color text,
     brakes text,
-    gears text,
+    speeds smallint,
     handlebars text,
     created_at timestamp with time zone DEFAULT now(),
     updated_at timestamp with time zone
@@ -305,7 +305,7 @@ ALTER TABLE ONLY "user" ALTER COLUMN id SET DEFAULT nextval('user_id_seq'::regcl
 -- Data for Name: bike; Type: TABLE DATA; Schema: public; Owner: ann
 --
 
-COPY bike (id, style, brand, model, color, brakes, gears, handlebars, created_at, updated_at) FROM stdin;
+COPY bike (id, style, brand, model, color, brakes, speeds, handlebars, created_at, updated_at) FROM stdin;
 \.
 
 
