@@ -12,7 +12,7 @@ class App extends React.Component {
   }
   render() {
     return(
-      <div className="mdl-layout__tab-panel is-active" id="overview">
+      <div>
         {this.state.results.map((el) => {
           return (
             <BikeListItem

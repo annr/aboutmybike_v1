@@ -10,3 +10,13 @@
 
 @import 'src/material-design-lite';
 
+
+/* remove !important below when you figure out a better way */
+.amb--bike-list-item-header {
+  width: 35% !important;
+}
+
+.amb--bike-list-item-card {
+  width: 65% !important;
+}
+
