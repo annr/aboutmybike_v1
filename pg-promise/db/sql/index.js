@@ -47,7 +47,7 @@ function sql(file) {
 
 module.exports = {
     bike: {
-        add: sql('users/add.sql')
+        add: sql('bike/add.sql')
     }
 };
 
