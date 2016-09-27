@@ -13,8 +13,17 @@ var app = express();
 // Bike Web API
 //////////////////////////////////////////////
 
-// add a new bike:
-GET('/bike/add/:style', req => db.bike.add(req.params.style));
+// add a new bike with user Id and name:
+GET('/bike/add/:userId/:style/:brand/:model/:color/:brakes/:speeds/:handlebars', req => db.bike.add({
+    userId: +req.params.userId,
+    style: req.params.style,
+    brand: req.params.brand,
+    model: req.params.model,
+    color: req.params.color,
+    brakes: req.params.brakes,
+    speeds: req.params.speeds,
+    handlebars: req.params.handlebars
+}));
 
 // find a bike by id:
 GET('/bike/find/:id', req => db.bike.find(+req.params.id));

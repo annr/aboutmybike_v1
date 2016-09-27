@@ -3,3 +3,4 @@
 .eslintrc
 npm-debug.log
 /node_modules/
+/pg-promise/db/errors.log

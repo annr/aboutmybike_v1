@@ -6,10 +6,8 @@ module.exports = (rep, pgp) => {
 
     return {
         // Adds a new bike, and returns the new id;
-
-        //??
-        add: style =>
-            rep.one(sql.add, style, user => user.id),
+        add: values =>
+            rep.one(sql.add, values, user => user.id),
 
         // Tries to delete a bike by id, and returns the number of records deleted;
         remove: id =>
