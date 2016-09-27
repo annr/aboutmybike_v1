@@ -3,7 +3,6 @@ var webpack = require("webpack");
 module.exports = {
   entry: {
     app: "./src/js/app.js",
-    //mdl: "./src/js/mdl.js",
     vendor: ["jquery", "lodash", "react", "react-dom"]
   },
   output: {

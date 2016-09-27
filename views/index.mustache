@@ -2,18 +2,17 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>About My Bike</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" media="all" href="/dist/css/main.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
- <body class="default-primary-color text-primary-color">
+ <body>
 
-<h2>Bikes</h2>
-<ol>
-{{#bikes}}
-  <li>{{> bike}}</li>
-{{/bikes}}
-</ol>
+    <div id="target"></div>
 
-</body>
+    <script src="vendor.bundle.js"></script>
+    <script src="dist/mdl.bundle.js"></script>
+    <script src="main.bundle.js"></script>
+
+  </body>
 </html>
