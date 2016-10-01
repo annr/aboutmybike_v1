@@ -1,27 +1,16 @@
-const React = require('react');
-const preload = require('json!../fixtures/bikes');
-const _ = require('lodash');
-const BikeListItem = require('./BikeListItem');
+import React from 'react';
+import { Link } from 'react-router';
+import Header from './Header';
+import Footer from './Footer';
+//const BikeListItem = require('./BikeListItem');
+
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      results: _.clone(preload.Bikes)
-    };
-  }
   render() {
     return(
       <div>
-        {this.state.results.map((el) => {
-          return (
-            <BikeListItem
-              key={el.id}
-              id={el.id}
-              {...el}
-            />
-          );
-        })}
+        <Header />
+        <Footer />
       </div>
     );
   }

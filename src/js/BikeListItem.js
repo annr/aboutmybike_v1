@@ -1,5 +1,9 @@
 const React = require('react');
 
+//import { Link } from 'react-router'
+//const ReactRouter = require('react-router');
+const Link = require('react-router').Link;
+
 class BikeListItem extends React.Component {
   render() {
     let photo = "dist/images/mock/bike" + this.props.id + ".jpg";
