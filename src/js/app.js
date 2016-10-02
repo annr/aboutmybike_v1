@@ -4,7 +4,7 @@ const App = require("./index");
 
 const { Router, Route, hashHistory } = require('react-router');
 
-import Bikes from './src/js/Bikes';
+import Bikes from './Bikes';
 
 ReactDOM.render((
   <Router history={hashHistory}>

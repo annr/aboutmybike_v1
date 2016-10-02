@@ -36,6 +36,7 @@
     "node-sass": "^3.8.0",
     "pg-promise": "^5.3.3",
     "react-router": "^2.8.1",
+    "react-tools": "^0.13.3",
     "webpack": "^1.13.2"
   },
   "dependencies": {
