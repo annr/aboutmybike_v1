@@ -24,7 +24,8 @@ curl -L https://www.npmjs.com/install.sh | sh
 git clone https://github.com/annr/aboutmybike.git
 cd aboutmybike
 npm install
-npm install -g less
+npm install less -g
+npm install webpack webpack-dev-server -g
 lessc src/less/main.less dist/css/main.css
 webpack
 DEBUG=express:* npm start
