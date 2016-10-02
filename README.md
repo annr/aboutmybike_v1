@@ -28,7 +28,7 @@ npm install less -g
 npm install webpack webpack-dev-server -g
 lessc src/less/main.less dist/css/main.css
 webpack
-DEBUG=express:* npm start
+npm start
 
 ```
 
