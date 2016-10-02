@@ -18,6 +18,8 @@ Installing npm will probably look something like this:
 curl -L https://www.npmjs.com/install.sh | sh
 ```
 
+boo
+
 ## Clone the repo
 
 ```
