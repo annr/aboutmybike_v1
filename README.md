@@ -4,12 +4,21 @@
 First you'll need [Node.js](https://nodejs.org) and the package manager
 that comes with it: [npm](https://www.npmjs.com/).
 
+(You might have these installed already.)
+
+```
+which npm
+which node
+```
+To be on the safe side, I'd get Node 6+
+
 ## Clone the repo
 
 ```
 git clone https://github.com/annr/aboutmybike.git
 cd aboutmybike
 npm install
+npm install -g less
 lessc src/less/main.less dist/css/main.css
 webpack
 DEBUG=express:* npm start
