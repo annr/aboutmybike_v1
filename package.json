@@ -2,7 +2,7 @@
   "name": "aboutmybike",
   "version": "1.0.0",
   "description": "The best bike is the one you have.",
-  "main": "index.js",
+  "main": "./src/js/app.js",
   "scripts": {
     "test": "test",
     "start": "webpack-dev-server --inline --content-base ."

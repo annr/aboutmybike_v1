@@ -2,7 +2,7 @@ var webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: "./index.js",
+    app: "./src/js/app.js",
     vendor: ["jquery", "lodash", "bootstrap","react", "react-dom"]
   },
   output: {
