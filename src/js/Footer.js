@@ -1,5 +1,5 @@
-const React = require('react');
-const Link = require('react-router').Link;
+import React from 'react';
+import { Link } from 'react-router';
 
 class Footer extends React.Component {
   render() {

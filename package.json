@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node ./bin/www"
+    "start": "webpack-dev-server --inline --content-base ."
   },
   "repository": {
     "type": "git",
