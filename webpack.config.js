@@ -1,14 +1,13 @@
+var path = require('path');
 var webpack = require("webpack");
 
 module.exports = {
   entry: {
-    app: "./src/js/app.js",
+    app: "./src/js/index.js",
     vendor: ["jquery", "lodash", "bootstrap","react", "react-dom"]
   },
   output: {
-    path: './dist',
-    //filename: "[name].bundle.js",
-    //publicPath: "/assets/",
+    path: path.join(__dirname, 'dist'),
     filename: "main.bundle.js"
   },
   module: {

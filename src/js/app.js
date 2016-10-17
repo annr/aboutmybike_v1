@@ -1,14 +1,24 @@
-const React = require("react");
-const ReactDOM = require("react-dom");
-const App = require("./index");
+// import { bindActionCreators } from 'redux';
 
-const { Router, Route, hashHistory } = require('react-router');
+// import { connect } from 'react-redux';
 
-import Bikes from './Bikes';
+// import * as actionCreators from '../actions/actionCreators'
 
-ReactDOM.render((
-  <Router history={hashHistory}>
-    <Route path="/" component={App} />
-    <Route path="/" component={Bikes} />
-  </Router>
-  ), document.getElementById("target"));
+// import Main from './Main';
+
+
+// function mapStateToProps(state) {
+//   return {
+//     posts: state.posts,
+//     comments: state.comments
+//   }
+// }
+
+// function mapDispatchToProps(dispatch) {
+//   return bindActionCreators(actionCreators, dispatch);
+// }
+
+// const App = connect(mapStateToProps, mapDispatchToProps)(Main);
+
+// export default App;
+

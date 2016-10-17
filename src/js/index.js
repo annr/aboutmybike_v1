@@ -1,36 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router';
-import _ from 'lodash';
-import Header from './Header';
-import Footer from './Footer';
-const preload = require('json!../fixtures/bikes');
-const BikeListItem = require('./BikeListItem');
+const React = require("react");
+const ReactDOM = require("react-dom");
 
+import Main from './components/Main';
+import Grid from './components/Grid';
+import Add from './components/Add';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      results: _.clone(preload.Bikes)
-    };
-  }
-  render() {
-    return(
-      <div>
-        <Header />
-        {this.state.results.map((el) => {
-          return (
-            <BikeListItem
-              key={el.id}
-              id={el.id}
-              {...el}
-            />
-          );
-        })}
-        <Footer />
-      </div>
-    );
-  }
-}
+const { Router, Route, hashHistory, IndexRoute } = require('react-router');
 
-module.exports = App;
+ReactDOM.render((
+  <Router history={hashHistory}>
+    <Route path="/" component={Main}>
+      <IndexRoute component={Grid}></IndexRoute>
+      <Route path="/add" component={Add}></Route>
+    </Route>
+  </Router>
+  ), document.getElementById("target"));
