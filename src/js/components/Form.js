@@ -12,8 +12,8 @@ class Form extends React.Component {
         </div>
         <p>All fields are optional</p>
         <div className="form-group">
-          <label htmlFor="bikeType">Type</label>
-          <select multiple="" className="form-control" id="bikeType">
+          <label htmlFor="bikeStyle">Style</label>
+          <select multiple="" className="form-control" id="bikeStyle">
             <option></option>
             <option>Road</option>
             <option>Mountain</option>
@@ -30,51 +30,46 @@ class Form extends React.Component {
           </select>
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputPassword1">Password</label>
-          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+          <label htmlFor="brand">Brand</label>
+          <input type="text" className="form-control" id="brand" placeholder="Ex. Raleigh" />
         </div>
         <div className="form-group">
-          <label htmlFor="exampleSelect1">Example select</label>
-          <select className="form-control" id="exampleSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>895</option>
-          </select>
-        </div>
-        <div className="form-group">
-          <label htmlFor="saySomething">Say Something about your bike</label>
-          <textarea className="form-control" id="saySomething" rows="3"></textarea>
+          <label htmlFor="model">Model</label>
+          <input type="text" className="form-control" id="model" />
         </div>
         <fieldset className="form-group">
-          <legend>Radio buttons</legend>
+          <legend>Brakes</legend>
           <div className="form-check">
             <label className="form-check-label">
-              <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="" />
-              Option one is this and that—be sure to include why it's great
+              <input type="radio" className="form-check-input" name="optionsBrakes" id="optionsBrakes1" value="rim" />
+              Rim (most common)
             </label>
           </div>
           <div className="form-check">
           <label className="form-check-label">
-              <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2" />
-              Option two can be something else and selecting it will deselect option one
+              <input type="radio" className="form-check-input" name="optionsBrakes" id="optionsBrakes2" value="disc" />
+              Disc
             </label>
           </div>
           <div className="form-check disabled">
           <label className="form-check-label">
-              <input type="radio" className="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3" disabled="" />
-              Option three is disabled
+              <input type="radio" className="form-check-input" name="optionsBrakes" id="optionsBrakes3" value="none" />
+              None / other
             </label>
           </div>
         </fieldset>
-        <div className="form-check">
-          <label className="form-check-label">
-            <input type="checkbox" className="form-check-input" />
-            Check me out
-          </label>
+        <div className="form-group">
+          <label forHtml="numberOfGears">Speeds</label>
+          <input type="number" className="form-control form-control-number" id="numberOfSpeeds" aria-describedby="numberOfSpeeds" />
         </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
+        <div className="form-group">
+          <label htmlFor="saySomething">Say Something about your bike</label>
+          <textarea className="form-control" id="saySomething" rows="5"></textarea>
+        </div>
+        <div className="form-group">
+        <small id="fileHelp" class="form-text text-muted">You can add all the details you want next, or later.</small>
+        </div>
+        <button type="submit" className="btn btn-primary">Save Basic Details</button>
       </form>
     )
   }
