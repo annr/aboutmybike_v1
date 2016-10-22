@@ -7,7 +7,7 @@ module.exports = {
     vendor: ["jquery", "lodash", "bootstrap","react", "react-dom"]
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    //never use dist here until you figure out why it breaks hmr
     filename: "main.bundle.js"
   },
   module: {
