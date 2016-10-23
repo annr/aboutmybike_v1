@@ -24,7 +24,6 @@ curl -L https://www.npmjs.com/install.sh | sh
 git clone https://github.com/annr/aboutmybike.git
 cd aboutmybike
 npm install
-npm install less -g
 npm install webpack webpack-dev-server -g
 npm run build-css
 npm start
@@ -35,7 +34,7 @@ That's it! Open http://localhost:8080/ in your favorite browser.
 
 http://localhost:8080/ is for hot-reloaded web development with webpack. With every file change the ES6 code is transpiled to ES5 AND the page is reloaded. This is necessary for speed -- we don't want to add a step to our workflow now that we live in a transpiled world, and we also don't want to be refreshing the brower to look at every change we make.
 
-Any changes to the requested HTML will not appear -- it's just the linked javascript changes that get reloaded. You should be able to add CSS classes to the markup and see the changes but you can't for the time being add to the stylesheets and see the changes. The style sheets are currently manually compiled with the `lessc` command in the setup above.
+The style sheets are currently manually compiled with the `npm run build-css` command in the setup above. Sorry but for now the CSS is not automatically rebuilt with changes.
 
 
 ## Setting up the database

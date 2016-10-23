@@ -73,11 +73,58 @@ dl.bike-details dt {
   height: 250px;
 }
 
-@media (min-width: 768px) and (max-width: 992px) {
+@media (min-width: 992px) and (max-width: 1200px) {
+  .card-photo-wrapper {
+    height: 200px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
   .card-photo-wrapper {
     height: 145px;
   }
+  .card-title {
+    font-size: 1.1rem;
+  }
 }
+
+@media (min-width: 543px) and (max-width: 767px) {
+  .card-photo-wrapper {
+    height: 350px;
+  }
+}
+
+@media (min-width: 500px) and (max-width: 543px) {
+  .card-photo-wrapper {
+    height: 315px;
+  }
+}
+
+@media (min-width: 465px) and (max-width: 499px) {
+  .card-photo-wrapper {
+    height: 290px;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 465px) {
+  .card-photo-wrapper {
+    height: 250px;
+  }
+}
+
+
+@media (min-width: 390px) and (max-width: 429px) {
+  .card-photo-wrapper {
+    height: 235px;
+  }
+}
+
+@media (max-width: 389px) {
+  .card-photo-wrapper {
+    height: 200px;
+  }
+}
+
 
 .card-photo {
     width: 100%;
