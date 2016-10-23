@@ -5,15 +5,16 @@ class GridItem extends React.Component {
   render() {
     let photo = "dist/images/mock/bike" + this.props.id + ".jpg";
     let link = "/view/" + this.props.id;
-    let description = "placeholder";
     return (
-      <div>
-        <Link to={link}>
-          <img src={photo} width="300" height="225" alt={this.props.brand} />
-        </Link>
-        <h4>{this.props.brand} {this.props.model}</h4>
-        {description}
-        <Link to={link}>About This Bike</Link>
+      <div className="col-md-4">
+        <div className="card">
+          <div className="card-photo-wrapper"><img className="card-photo" src={photo} alt={this.props.brand} /></div>
+          <div className="card-block">
+            <h4 className="card-title">{this.props.brand} {this.props.model}</h4>
+            <p className="card-text"></p>
+            <Link to={link}>View</Link>
+          </div>
+        </div>
       </div>
     );
   }

@@ -4,7 +4,7 @@ export default React.createClass({
     let photo = "dist/images/mock/bike" + this.props.id + ".jpg";
     let username = 'username';
     return (
-      <div>
+      <div className="generic-container">
         <img src={photo} width="600" height="450" alt={this.props.brand} />
         <h1>{username}'s {this.props.brand} {this.props.model}</h1>
         <dl className="bike-details">
@@ -20,6 +20,8 @@ export default React.createClass({
          <dd>{this.props.handlebars}</dd>
          <dt>Era</dt>
          <dd>{this.props.era}</dd>
+         <dt>Nickname</dt>
+         <dd>{this.props.nickname}</dd>
         </dl>
       </div>
     );

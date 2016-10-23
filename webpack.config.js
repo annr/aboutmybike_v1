@@ -4,7 +4,7 @@ var webpack = require("webpack");
 module.exports = {
   entry: {
     app: "./src/js/index.js",
-    vendor: ["jquery", "lodash", "bootstrap","react", "react-dom"]
+    vendor: ["jquery", "lodash", "bootstrap", "react", "react-dom"]
   },
   output: {
     //never use dist here until you figure out why it breaks hmr

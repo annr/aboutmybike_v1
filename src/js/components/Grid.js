@@ -11,7 +11,7 @@ class Grid extends React.Component {
   }
   render() {
     return(
-      <div>
+      <div className="row">
         {this.state.results.map((el) => {
           return (
             <GridItem

@@ -6,3 +6,79 @@
 .foo {
   @include absolute(0, 0, auto, auto);
 }
+
+body {
+  padding-top: 5rem;
+}
+
+.generic-container {
+  padding: 3rem 1.5rem;
+  margin: 0 auto;
+}
+
+.add-bike-form {
+  max-width: 410px;
+}
+
+.form-check-label {
+  padding-left: 1.25rem;
+  cursor: pointer;
+}
+
+input[type="radio"] {
+  margin: 0 1em;
+  font-size: 1.4rem;
+}
+
+.form-control-number {
+  width: 70px;
+}
+
+label {
+  font-weight: normal;
+}
+
+legend {
+  font-size: 1.6rem;
+}
+
+input[type="file"].form-control-file {
+  display: none;
+}
+
+.custom-file-upload {
+  cursor: pointer;
+}
+
+.add-bike-photo {
+  opacity: 0.25;
+}
+
+dl.bike-details dt {
+  float: left;
+  padding-right: 1rem;
+}
+
+.card-title {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.card-photo-wrapper {
+  width: 100%;
+  background-color: gray;
+  overflow: hidden;
+  height: 250px;
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+  .card-photo-wrapper {
+    height: 145px;
+  }
+}
+
+.card-photo {
+    width: 100%;
+}
