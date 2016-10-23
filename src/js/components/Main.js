@@ -9,7 +9,9 @@ const Main = React.createClass({
     return(
       <div>
         <Header />
-        {this.props.children}
+        <div className="page-content">
+          {this.props.children}
+        </div>
         <Footer />
       </div>
     )

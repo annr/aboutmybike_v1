@@ -4,9 +4,7 @@ const Form = require('./Form');
 class Add extends React.Component {
   render() {
     return (
-      <div>
-        <Form />
-      </div>
+      <Form />
     );
   }
 }

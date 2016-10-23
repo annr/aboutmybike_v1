@@ -2,11 +2,12 @@ import React from 'react';
 export default React.createClass({
   render() {
     let photo = "dist/images/mock/bike" + this.props.id + ".jpg";
+    let username = 'username';
     return (
       <div>
-        <img src={photo} width="300" height="225" alt={this.props.brand} />
-        <h1>{this.props.brand} {this.props.model}</h1>
-        <dl>
+        <img src={photo} width="600" height="450" alt={this.props.brand} />
+        <h1>{username}'s {this.props.brand} {this.props.model}</h1>
+        <dl className="bike-details">
          <dt>Style</dt>
          <dd>{this.props.style}</dd>
          <dt>Color</dt>
@@ -17,8 +18,8 @@ export default React.createClass({
          <dd>{this.props.speeds}</dd>
          <dt>Handlebars</dt>
          <dd>{this.props.handlebars}</dd>
-         <dt>Style</dt>
-         <dd>{this.props.style}</dd>
+         <dt>Era</dt>
+         <dd>{this.props.era}</dd>
         </dl>
       </div>
     );

@@ -59,7 +59,7 @@ class Form extends React.Component {
           </div>
         </fieldset>
         <div className="form-group">
-          <label forHtml="numberOfGears">Speeds</label>
+          <label htmlFor="numberOfGears">Speeds</label>
           <input type="number" className="form-control form-control-number" id="numberOfSpeeds" aria-describedby="numberOfSpeeds" />
         </div>
         <div className="form-group">
@@ -67,7 +67,7 @@ class Form extends React.Component {
           <textarea className="form-control" id="saySomething" rows="5"></textarea>
         </div>
         <div className="form-group">
-        <small id="fileHelp" class="form-text text-muted">You can add all the details you want next, or later.</small>
+        <small id="fileHelp" className="form-text text-muted">You can add all the details you want next, or later.</small>
         </div>
         <button type="submit" className="btn btn-primary">Save Basic Details</button>
       </form>
