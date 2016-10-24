@@ -8,7 +8,11 @@ class GridItem extends React.Component {
     return (
       <div className="col-md-4">
         <div className="card">
-          <div className="card-photo-wrapper"><img className="card-photo" src={photo} alt={this.props.brand} /></div>
+          <div className="card-photo-wrapper">
+            <Link to={link}>
+              <img className="card-photo" src={photo} alt={this.props.brand} />
+            </Link>
+          </div>
           <div className="card-block">
             <h4 className="card-title">{this.props.brand} {this.props.model}</h4>
             <p className="card-text"></p>
