@@ -59,6 +59,13 @@ dl.bike-details dt {
   padding-right: 1rem;
 }
 
+.card {
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+  -moz-box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+}
+
+
 .card-title {
   width: 100%;
   white-space: nowrap;
