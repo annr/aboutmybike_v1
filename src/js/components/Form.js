@@ -1,15 +1,11 @@
 import React from 'react';
+import PhotoUpload from './PhotoUpload';
 
 class Form extends React.Component {
   render() {
     return (
-      <form className="generic-container add-bike-form">
-        <div className="form-group">
-          <label className="custom-file-upload">
-            <input type="file" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" />
-            <img src="dist/images/upload.png" width="360" height="238" className="add-bike-photo" />
-          </label>
-        </div>
+      <form className="generic-container add-bike-form" encType="multipart/form-data" action="/save_bike" method="post">
+        <PhotoUpload />
         <p>All fields are optional</p>
         <div className="form-group">
           <label htmlFor="bikeStyle">Style</label>
@@ -79,5 +75,10 @@ class Form extends React.Component {
 //   <label htmlFor="numberOfGears">Speeds</label>
 //   <input type="number" className="form-control form-control-number" id="numberOfSpeeds" aria-describedby="numberOfSpeeds" />
 // </div>
+
+// <label className="custom-file-upload">
+//   <input type="file" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" />
+//   <img src="dist/images/upload.png" width="360" height="238" className="add-bike-photo" />
+// </label>
 
 module.exports = Form;

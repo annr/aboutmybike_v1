@@ -5,7 +5,7 @@ export default React.createClass({
     let username = 'username';
     return (
       <div className="generic-container">
-        <img src={photo} width="600" height="450" alt={this.props.brand} />
+        <img src={photo} width="600" alt={this.props.brand} />
         <h1>{username}'s {this.props.brand} {this.props.model}</h1>
         <dl className="bike-details">
          <dt>Style</dt>

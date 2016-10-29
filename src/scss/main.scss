@@ -30,6 +30,16 @@ input[type="radio"] {
   font-size: 1.4rem;
 }
 
+input[type="file"].form-control-file {
+  display: none;
+}
+
+.preview-bike-photo-wrapper {
+  height: 238px;
+  width: 360px;
+  overflow: hidden;
+}
+
 .form-control-number {
   width: 70px;
 }
@@ -42,15 +52,15 @@ legend {
   font-size: 1.6rem;
 }
 
-input[type="file"].form-control-file {
-  display: none;
-}
-
 .custom-file-upload {
   cursor: pointer;
 }
 
 .add-bike-photo {
+  opacity: 0.30;
+}
+
+.add-bike-photo:hover {
   opacity: 0.25;
 }
 
@@ -68,7 +78,6 @@ dl.bike-details dt {
 
 .card-photo-wrapper {
   width: 100%;
-  background-color: gray;
   overflow: hidden;
   height: 250px;
 }

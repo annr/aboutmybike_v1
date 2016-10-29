@@ -10,6 +10,34 @@ var routes = require('./routes/index');
 var app = express();
 var mustacheExpress = require('mustache-express');
 
+var multer  = require('multer');
+
+var storage = multer.diskStorage({
+  destination: function (req, file, cb) {
+    cb(null, 'dist/uploads');
+  },
+  filename: function (req, file, cb) {
+    var extension = 'jpg';
+    // there are only two types
+    if(file.mimetype === 'image/png') {
+      extension = 'png';
+    }
+    var key = Date.now();
+    cb(null, key + '.' + extension);
+  }
+});
+
+var upload = multer({
+  storage: storage/*,
+  fileFilter: function(req, file, cb) {
+    if (file.mimetype === 'image/jpeg' || file.mimetype === 'image/png') {
+      cb(null, true);
+    } else {
+      cb(null, false);
+    }
+  }*/
+});
+
 // Register '.mustache' extension with The Mustache Express
 app.engine('mustache', mustacheExpress());
 
@@ -26,6 +54,11 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
+
+app.post('/upload', upload.single('bike_photo'), function (req, res, next) {
+  res.writeHead(200, {"Content-Type": "application/json"});
+  res.end(JSON.stringify({ tmp_path: req.file.path }));
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
