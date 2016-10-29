@@ -60,6 +60,12 @@ app.post('/upload', upload.single('bike_photo'), function (req, res, next) {
   res.end(JSON.stringify({ tmp_path: req.file.path }));
 });
 
+app.post('/save_bike', function (req, res, next) {
+  console.log(req.body);
+  res.writeHead(200, {"Content-Type": "application/json"});
+  res.end(JSON.stringify({ success: true }));
+});
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
