@@ -12,19 +12,6 @@ class Detail extends React.Component {
     });
   }
 
-  componentDidMount() {
-    // this.serverRequest = $.ajax({
-    //   url: 'http://localhost:3030/bike/find/' + this.props.params.bikeId,
-    //   success: (res) => {
-    //     this.setState(res.data);
-    //   }
-    // })
-  }
-
-  componentWillUnmount() {
-    // this.serverRequest.abort();
-  }
-
   render() {
     return (
       <DetailAll

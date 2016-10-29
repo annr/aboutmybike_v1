@@ -19,3 +19,24 @@ const Main = React.createClass({
 });
 
 export default Main;
+
+/*  getInitialState() {
+    return {
+      results: []
+    }
+  },
+
+  componentDidMount() {
+      this.loadBikesFromServer();
+  },
+
+  loadBikesFromServer() {
+    $.ajax({
+      url: '/api/bikes',
+      dataType: 'json',
+      cache: false,
+      success: function(data) {
+        this.setState({results: data.data});
+      }.bind(this)
+    });
+  },*/
