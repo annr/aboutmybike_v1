@@ -12,21 +12,27 @@ class Form extends React.Component {
   handleSubmit(event) {
     event.preventDefault(); // avoid to execute the actual submit of the form.
     $.ajax({
-       type: "POST",
-       url: "/save_bike",
-       data: $(event.target.parentElement).serialize(), // serializes the form's elements.
-       success: function(data)
-       {
-         alert(data); // show response
-       }
+      type: "POST",
+      url: "/api/bike/create",
+      data: $(event.target.parentElement).serialize(),
+      dataType: "json",
+      success: function(data) {
+        return data;
+      },
+      error: function(err) {
+        return {
+          error: err.status + ": " + err.statusText
+        }
+      }
      });
   }
 
   render() {
     return (
-      <form className="generic-container add-bike-form" encType="multipart/form-data" action="/save_bike" method="post">
+      <form className="generic-container add-bike-form" encType="multipart/form-data">
         <PhotoUpload />
         <p>All fields are optional</p>
+        <input type="hidden" name="user_id" value="1" />
         <div className="form-group">
           <label htmlFor="bikeStyle">Style</label>
           <select multiple="" className="form-control" id="bikeStyle" name="style">

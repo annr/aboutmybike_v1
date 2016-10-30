@@ -43,10 +43,8 @@ function getSingleBike(req, res, next) {
 }
 
 function createBike(req, res, next) {
-  req.body.age = parseInt(req.body.age);
-  db.none('insert into bike(style, brand, age, nickname)' +
-      'values(${style}, ${brand}, ${model}, ${nickname})',
-    req.body)
+  db.none('insert into bike(user_id, style, brand, model) ' +
+      'values($1, $2, $3, $4)', [parseInt(req.body.user_id), req.body.style, req.body.brand, req.body.model])
     .then(function () {
       res.status(200)
         .json({
@@ -55,6 +53,7 @@ function createBike(req, res, next) {
         });
     })
     .catch(function (err) {
+      console.log('error creating bike');
       return next(err);
     });
 }

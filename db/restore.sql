@@ -1,3 +1,8 @@
+DROP DATABASE IF EXISTS amb;
+CREATE DATABASE amb;
+
+\c amb;
+
 --
 -- PostgreSQL database dump
 --

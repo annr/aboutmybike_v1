@@ -33,7 +33,7 @@ class PhotoUpload extends React.Component {
     return (
       <div className="form-group">
         <label className="custom-file-upload">
-          <input type="file" onChange={this.handleUploadChange} name="bike_photo" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" />
+          <input type="file" onChange={this.handleChange} name="bike_photo" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp" />
           <img src="dist/images/upload.png" width="360" height="238" className="add-bike-photo" style={{display: this.state.uploaderDisplay }} />
           <div className="preview-bike-photo-wrapper" style={{display: this.state.previewDisplay }}>
             <img src={this.state.src} width="360" className="preview-bike-photo"/>
