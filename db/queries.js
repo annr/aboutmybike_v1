@@ -8,6 +8,7 @@ var options = {
 var pgp = require('pg-promise')(options);
 var connectionString = 'postgres://localhost:5432/amb';
 var db = pgp(connectionString);
+var fs = require('fs');
 
 // add query functions
 
@@ -43,9 +44,16 @@ function getSingleBike(req, res, next) {
 }
 
 function createBike(req, res, next) {
-  db.none('insert into bike(user_id, style, brand, model) ' +
-      'values($1, $2, $3, $4)', [parseInt(req.body.user_id), req.body.style, req.body.brand, req.body.model])
-    .then(function () {
+  var previewPath = req.body.preview_path;
+  db.one('insert into bike(user_id, style, brand, model) ' +
+      'values($1, $2, $3, $4) returning id', [parseInt(req.body.user_id), req.body.style, req.body.brand, req.body.model])
+    .then(function (data) {
+      var newDir = 'dist/images/mock/';
+      var extension = previewPath.split('.')[1];
+      var newPath = newDir+data.id+'.'+extension;
+      fs.rename(previewPath, newPath, function() {
+        console.log('successfully moved preview image');
+      });
       res.status(200)
         .json({
           status: 'success',
@@ -53,7 +61,6 @@ function createBike(req, res, next) {
         });
     })
     .catch(function (err) {
-      console.log('error creating bike');
       return next(err);
     });
 }
