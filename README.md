@@ -22,6 +22,8 @@ curl -L https://www.npmjs.com/install.sh | sh
 
 ```
 git clone https://github.com/annr/aboutmybike.git
+# note: if you use an ssh key it may be
+# `git clone git@github.com:annr/aboutmybike.git`
 cd aboutmybike
 npm install
 npm install webpack webpack-dev-server -g
@@ -60,4 +62,3 @@ nvm install v4.4.0
 nvm use 4
 npm run build-css
 ```
-
