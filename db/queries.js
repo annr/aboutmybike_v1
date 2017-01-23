@@ -48,6 +48,7 @@ function createBike(req, res, next) {
   db.one('insert into bike(user_id, style, brand, model) ' +
       'values($1, $2, $3, $4) returning id', [parseInt(req.body.user_id), req.body.style, req.body.brand, req.body.model])
     .then(function (data) {
+      var bikeId = data.id;
       var newDir = 'dist/images/mock/';
       var extension = previewPath.split('.')[1];
       var newPath = newDir+data.id+'.'+extension;
@@ -57,7 +58,7 @@ function createBike(req, res, next) {
       res.status(200)
         .json({
           status: 'success',
-          message: 'Inserted one bike'
+          bikeId: bikeId
         });
     })
     .catch(function (err) {

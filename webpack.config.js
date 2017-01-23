@@ -8,7 +8,7 @@ module.exports = {
   },
   output: {
     //never use dist here until you figure out why it breaks hmr
-    //path: "dist",
+    path: "dist",
     filename: "main.bundle.js"
   },
   module: {

@@ -1,5 +1,6 @@
 import React from 'react';
 import PhotoUpload from './PhotoUpload';
+import { browserHistory } from 'react-router';
 
 class Form extends React.Component {
 
@@ -17,12 +18,13 @@ class Form extends React.Component {
       data: $(event.target.parentElement).serialize(),
       dataType: "json",
       success: function(data) {
-        return data;
+        const path = `/#/view/${data.bikeId}`;
+        browserHistory.push(path);
       },
       error: function(err) {
         return {
           error: err.status + ": " + err.statusText
-        }
+        };
       }
      });
   }
