@@ -5,9 +5,31 @@ var options = {
   promiseLib: promise
 };
 
+var connectionString;
+var connectionObject;
+
 var pgp = require('pg-promise')(options);
-var connectionString = 'postgres://localhost:5432/amb';
-var db = pgp(connectionString);
+// LOCALHOST:
+//connectionString = 'postgres://localhost:5432/amb';
+
+// or with connctionObject;
+// connectionObject = {
+//     host: 'localhost',
+//     port: 5432,
+//     database: 'amb',
+//     user: 'arobson'
+// };
+
+// AWS:
+connectionObject = {
+    host: 'ambdbinstance.cg25hqhsvd0t.us-west-2.rds.amazonaws.com',
+    port: 5432,
+    database: 'amb',
+    user: 'arobson',
+    password: 'h34rt4nn71'
+};
+
+var db = pgp(connectionString || connectionObject);
 var fs = require('fs');
 
 // add query functions

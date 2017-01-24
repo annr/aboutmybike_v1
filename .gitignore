@@ -4,3 +4,12 @@
 npm-debug.log
 /node_modules/
 /pg-promise/db/errors.log
+main.bundle.js
+vendor.bundle.js
+.DS_Store
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
+.ebextensions/*

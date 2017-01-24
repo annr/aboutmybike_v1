@@ -1,17 +1,13 @@
-DROP DATABASE IF EXISTS amb;
-CREATE DATABASE amb;
-
-\c amb;
-
 --
 -- PostgreSQL database dump
 --
 
--- Dumped from database version 9.5.4
--- Dumped by pg_dump version 9.5.1
+-- Dumped from database version 9.6.1
+-- Dumped by pg_dump version 9.6.1
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
+-- SET idle_in_transaction_session_timeout = 0;
 SET client_encoding = 'UTF8';
 SET standard_conforming_strings = on;
 SET check_function_bodies = false;
@@ -19,18 +15,17 @@ SET client_min_messages = warning;
 SET row_security = off;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
-COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
-
+-- COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
 
 SET search_path = public, pg_catalog;
 
@@ -39,7 +34,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: bike; Type: TABLE; Schema: public; Owner: ann
+-- Name: bike; Type: TABLE; Schema: public; Owner: arobson
 --
 
 CREATE TABLE bike (
@@ -56,10 +51,10 @@ CREATE TABLE bike (
 );
 
 
-ALTER TABLE bike OWNER TO ann;
+ALTER TABLE bike OWNER TO arobson;
 
 --
--- Name: bike_id_seq; Type: SEQUENCE; Schema: public; Owner: ann
+-- Name: bike_id_seq; Type: SEQUENCE; Schema: public; Owner: arobson
 --
 
 CREATE SEQUENCE bike_id_seq
@@ -70,17 +65,17 @@ CREATE SEQUENCE bike_id_seq
     CACHE 1;
 
 
-ALTER TABLE bike_id_seq OWNER TO ann;
+ALTER TABLE bike_id_seq OWNER TO arobson;
 
 --
--- Name: bike_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ann
+-- Name: bike_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: arobson
 --
 
 ALTER SEQUENCE bike_id_seq OWNED BY bike.id;
 
 
 --
--- Name: city; Type: TABLE; Schema: public; Owner: ann
+-- Name: city; Type: TABLE; Schema: public; Owner: arobson
 --
 
 CREATE TABLE city (
@@ -91,10 +86,10 @@ CREATE TABLE city (
 );
 
 
-ALTER TABLE city OWNER TO ann;
+ALTER TABLE city OWNER TO arobson;
 
 --
--- Name: city_id_seq; Type: SEQUENCE; Schema: public; Owner: ann
+-- Name: city_id_seq; Type: SEQUENCE; Schema: public; Owner: arobson
 --
 
 CREATE SEQUENCE city_id_seq
@@ -105,17 +100,17 @@ CREATE SEQUENCE city_id_seq
     CACHE 1;
 
 
-ALTER TABLE city_id_seq OWNER TO ann;
+ALTER TABLE city_id_seq OWNER TO arobson;
 
 --
--- Name: city_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ann
+-- Name: city_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: arobson
 --
 
 ALTER SEQUENCE city_id_seq OWNED BY city.id;
 
 
 --
--- Name: photo; Type: TABLE; Schema: public; Owner: ann
+-- Name: photo; Type: TABLE; Schema: public; Owner: arobson
 --
 
 CREATE TABLE photo (
@@ -127,10 +122,10 @@ CREATE TABLE photo (
 );
 
 
-ALTER TABLE photo OWNER TO ann;
+ALTER TABLE photo OWNER TO arobson;
 
 --
--- Name: photo_id_seq; Type: SEQUENCE; Schema: public; Owner: ann
+-- Name: photo_id_seq; Type: SEQUENCE; Schema: public; Owner: arobson
 --
 
 CREATE SEQUENCE photo_id_seq
@@ -141,17 +136,17 @@ CREATE SEQUENCE photo_id_seq
     CACHE 1;
 
 
-ALTER TABLE photo_id_seq OWNER TO ann;
+ALTER TABLE photo_id_seq OWNER TO arobson;
 
 --
--- Name: photo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ann
+-- Name: photo_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: arobson
 --
 
 ALTER SEQUENCE photo_id_seq OWNED BY photo.id;
 
 
 --
--- Name: story; Type: TABLE; Schema: public; Owner: ann
+-- Name: story; Type: TABLE; Schema: public; Owner: arobson
 --
 
 CREATE TABLE story (
@@ -162,10 +157,10 @@ CREATE TABLE story (
 );
 
 
-ALTER TABLE story OWNER TO ann;
+ALTER TABLE story OWNER TO arobson;
 
 --
--- Name: story_id_seq; Type: SEQUENCE; Schema: public; Owner: ann
+-- Name: story_id_seq; Type: SEQUENCE; Schema: public; Owner: arobson
 --
 
 CREATE SEQUENCE story_id_seq
@@ -176,17 +171,17 @@ CREATE SEQUENCE story_id_seq
     CACHE 1;
 
 
-ALTER TABLE story_id_seq OWNER TO ann;
+ALTER TABLE story_id_seq OWNER TO arobson;
 
 --
--- Name: story_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ann
+-- Name: story_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: arobson
 --
 
 ALTER SEQUENCE story_id_seq OWNED BY story.id;
 
 
 --
--- Name: theft; Type: TABLE; Schema: public; Owner: ann
+-- Name: theft; Type: TABLE; Schema: public; Owner: arobson
 --
 
 CREATE TABLE theft (
@@ -199,10 +194,10 @@ CREATE TABLE theft (
 );
 
 
-ALTER TABLE theft OWNER TO ann;
+ALTER TABLE theft OWNER TO arobson;
 
 --
--- Name: theft_id_seq; Type: SEQUENCE; Schema: public; Owner: ann
+-- Name: theft_id_seq; Type: SEQUENCE; Schema: public; Owner: arobson
 --
 
 CREATE SEQUENCE theft_id_seq
@@ -213,17 +208,17 @@ CREATE SEQUENCE theft_id_seq
     CACHE 1;
 
 
-ALTER TABLE theft_id_seq OWNER TO ann;
+ALTER TABLE theft_id_seq OWNER TO arobson;
 
 --
--- Name: theft_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ann
+-- Name: theft_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: arobson
 --
 
 ALTER SEQUENCE theft_id_seq OWNED BY theft.id;
 
 
 --
--- Name: user; Type: TABLE; Schema: public; Owner: ann
+-- Name: user; Type: TABLE; Schema: public; Owner: arobson
 --
 
 CREATE TABLE "user" (
@@ -241,10 +236,10 @@ CREATE TABLE "user" (
 );
 
 
-ALTER TABLE "user" OWNER TO ann;
+ALTER TABLE "user" OWNER TO arobson;
 
 --
--- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: ann
+-- Name: user_id_seq; Type: SEQUENCE; Schema: public; Owner: arobson
 --
 
 CREATE SEQUENCE user_id_seq
@@ -255,74 +250,80 @@ CREATE SEQUENCE user_id_seq
     CACHE 1;
 
 
-ALTER TABLE user_id_seq OWNER TO ann;
+ALTER TABLE user_id_seq OWNER TO arobson;
 
 --
--- Name: user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: ann
+-- Name: user_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: arobson
 --
 
 ALTER SEQUENCE user_id_seq OWNED BY "user".id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ann
+-- Name: bike id; Type: DEFAULT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY bike ALTER COLUMN id SET DEFAULT nextval('bike_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ann
+-- Name: city id; Type: DEFAULT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY city ALTER COLUMN id SET DEFAULT nextval('city_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ann
+-- Name: photo id; Type: DEFAULT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY photo ALTER COLUMN id SET DEFAULT nextval('photo_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ann
+-- Name: story id; Type: DEFAULT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY story ALTER COLUMN id SET DEFAULT nextval('story_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ann
+-- Name: theft id; Type: DEFAULT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY theft ALTER COLUMN id SET DEFAULT nextval('theft_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: ann
+-- Name: user id; Type: DEFAULT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY "user" ALTER COLUMN id SET DEFAULT nextval('user_id_seq'::regclass);
 
 
 --
--- Data for Name: bike; Type: TABLE DATA; Schema: public; Owner: ann
+-- Data for Name: bike; Type: TABLE DATA; Schema: public; Owner: arobson
 --
 
 COPY bike (id, style, brand, model, color, brakes, speeds, handlebars, created_at, updated_at) FROM stdin;
+1	cruiser	Fuji	Cambridge III	red	rim	1	mustache	2016-09-16 18:13:22.682023-07	\N
+3	road	Raleigh	Technium	yellow+gray+pink	rim	12	drop	2016-09-16 18:24:52.781274-07	\N
+4	hybrid	Surly	Straggler	purple+mint	disc	10	drop	2016-09-16 18:27:28.759123-07	\N
+5	fat bike	State Bicycle Company	Megalith	yellow+mint+red	disc	7	riser	2016-09-16 21:31:49.890723-07	\N
+6	bmx	Mongoose	Custon Trials Bike	silver+gold	disc	1	riser	2016-09-16 21:33:55.323714-07	\N
+2	cruiser	Laguna BMX	Super Cruiser	chrome	none	1	other	2016-09-16 18:18:21.902632-07	\N
 \.
 
 
 --
--- Name: bike_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ann
+-- Name: bike_id_seq; Type: SEQUENCE SET; Schema: public; Owner: arobson
 --
 
-SELECT pg_catalog.setval('bike_id_seq', 1, false);
+SELECT pg_catalog.setval('bike_id_seq', 6, true);
 
 
 --
--- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: ann
+-- Data for Name: city; Type: TABLE DATA; Schema: public; Owner: arobson
 --
 
 COPY city (id, name, state, country) FROM stdin;
@@ -330,14 +331,14 @@ COPY city (id, name, state, country) FROM stdin;
 
 
 --
--- Name: city_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ann
+-- Name: city_id_seq; Type: SEQUENCE SET; Schema: public; Owner: arobson
 --
 
 SELECT pg_catalog.setval('city_id_seq', 1, false);
 
 
 --
--- Data for Name: photo; Type: TABLE DATA; Schema: public; Owner: ann
+-- Data for Name: photo; Type: TABLE DATA; Schema: public; Owner: arobson
 --
 
 COPY photo (id, original_filename, url_key, bike_id, user_id) FROM stdin;
@@ -345,14 +346,14 @@ COPY photo (id, original_filename, url_key, bike_id, user_id) FROM stdin;
 
 
 --
--- Name: photo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ann
+-- Name: photo_id_seq; Type: SEQUENCE SET; Schema: public; Owner: arobson
 --
 
 SELECT pg_catalog.setval('photo_id_seq', 1, false);
 
 
 --
--- Data for Name: story; Type: TABLE DATA; Schema: public; Owner: ann
+-- Data for Name: story; Type: TABLE DATA; Schema: public; Owner: arobson
 --
 
 COPY story (id, created_at, text, user_id) FROM stdin;
@@ -360,14 +361,14 @@ COPY story (id, created_at, text, user_id) FROM stdin;
 
 
 --
--- Name: story_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ann
+-- Name: story_id_seq; Type: SEQUENCE SET; Schema: public; Owner: arobson
 --
 
 SELECT pg_catalog.setval('story_id_seq', 1, false);
 
 
 --
--- Data for Name: theft; Type: TABLE DATA; Schema: public; Owner: ann
+-- Data for Name: theft; Type: TABLE DATA; Schema: public; Owner: arobson
 --
 
 COPY theft (id, reported_at, description, bike_id, owner_id, recovered_at) FROM stdin;
@@ -375,14 +376,14 @@ COPY theft (id, reported_at, description, bike_id, owner_id, recovered_at) FROM 
 
 
 --
--- Name: theft_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ann
+-- Name: theft_id_seq; Type: SEQUENCE SET; Schema: public; Owner: arobson
 --
 
 SELECT pg_catalog.setval('theft_id_seq', 1, false);
 
 
 --
--- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: ann
+-- Data for Name: user; Type: TABLE DATA; Schema: public; Owner: arobson
 --
 
 COPY "user" (id, created_at, last_login, username, facebook_id, name, first_name, last_name, facebook_link, gender, locale) FROM stdin;
@@ -390,14 +391,14 @@ COPY "user" (id, created_at, last_login, username, facebook_id, name, first_name
 
 
 --
--- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: ann
+-- Name: user_id_seq; Type: SEQUENCE SET; Schema: public; Owner: arobson
 --
 
 SELECT pg_catalog.setval('user_id_seq', 1, false);
 
 
 --
--- Name: bike_pkey; Type: CONSTRAINT; Schema: public; Owner: ann
+-- Name: bike bike_pkey; Type: CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY bike
@@ -405,7 +406,7 @@ ALTER TABLE ONLY bike
 
 
 --
--- Name: city_pkey; Type: CONSTRAINT; Schema: public; Owner: ann
+-- Name: city city_pkey; Type: CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY city
@@ -413,7 +414,7 @@ ALTER TABLE ONLY city
 
 
 --
--- Name: photo_pkey; Type: CONSTRAINT; Schema: public; Owner: ann
+-- Name: photo photo_pkey; Type: CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY photo
@@ -421,7 +422,7 @@ ALTER TABLE ONLY photo
 
 
 --
--- Name: story_pkey; Type: CONSTRAINT; Schema: public; Owner: ann
+-- Name: story story_pkey; Type: CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY story
@@ -429,7 +430,7 @@ ALTER TABLE ONLY story
 
 
 --
--- Name: theft_pkey; Type: CONSTRAINT; Schema: public; Owner: ann
+-- Name: theft theft_pkey; Type: CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY theft
@@ -437,7 +438,7 @@ ALTER TABLE ONLY theft
 
 
 --
--- Name: user_pkey; Type: CONSTRAINT; Schema: public; Owner: ann
+-- Name: user user_pkey; Type: CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY "user"
@@ -445,7 +446,7 @@ ALTER TABLE ONLY "user"
 
 
 --
--- Name: photo_bike_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: ann
+-- Name: photo photo_bike_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY photo
@@ -453,7 +454,7 @@ ALTER TABLE ONLY photo
 
 
 --
--- Name: photo_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: ann
+-- Name: photo photo_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY photo
@@ -461,7 +462,7 @@ ALTER TABLE ONLY photo
 
 
 --
--- Name: story_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: ann
+-- Name: story story_user_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY story
@@ -469,7 +470,7 @@ ALTER TABLE ONLY story
 
 
 --
--- Name: theft_bike_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: ann
+-- Name: theft theft_bike_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY theft
@@ -477,7 +478,7 @@ ALTER TABLE ONLY theft
 
 
 --
--- Name: theft_owner_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: ann
+-- Name: theft theft_owner_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: arobson
 --
 
 ALTER TABLE ONLY theft
@@ -485,16 +486,5 @@ ALTER TABLE ONLY theft
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: postgres
---
-
-REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM postgres;
-GRANT ALL ON SCHEMA public TO postgres;
-GRANT ALL ON SCHEMA public TO PUBLIC;
-
-
---
 -- PostgreSQL database dump complete
 --
-

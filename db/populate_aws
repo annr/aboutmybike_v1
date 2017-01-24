@@ -1,0 +1,6 @@
+psql \
+   -f restore.sql \
+   --host ambdbinstance.cg25hqhsvd0t.us-west-2.rds.amazonaws.com \
+   --port 5432 \
+   --username arobson \
+   --dbname amb
