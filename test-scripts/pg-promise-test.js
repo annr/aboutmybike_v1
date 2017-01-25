@@ -10,9 +10,8 @@ var pgp = require('pg-promise')(options);
 //connectionString = 'postgres://localhost:5432/amb';
 
 // AWS:
-//var connectionString = 'jdbc:postgresql://ambdbinstance.cg25hqhsvd0t.us-west-2.rds.amazonaws.com/amb';
 connectionObject = {
-    host: 'ambdbinstance.cg25hqhsvd0t.us-west-2.rds.amazonaws.com',
+    host: 'ambdbinstance.crufdsximznc.us-west-1.rds.amazonaws.com',
     port: 5432,
     database: 'amb',
     user: 'arobson',
