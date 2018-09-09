@@ -1,5 +1,5 @@
 const React = require('react');
-const bikes = require('json!../../fixtures/bikes').Bikes;
+import staticBikes from '../../data/bikes.json';
 import DetailAll from './DetailAll';
 
 class Detail extends React.Component {
@@ -7,8 +7,8 @@ class Detail extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.state = bikes.find(function(b) {
-      return  b.id === parseInt(props.params.bikeId);
+    this.state = staticBikes.Bikes.find(function (b) {
+      return b.id === parseInt(props.params.bikeId);
     });
   }
 

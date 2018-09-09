@@ -3,29 +3,26 @@
 ## Clone the repo
 
 ```
-git clone https://github.com/annr/aboutmybike.git
+git clone https://github.com/annr/aboutmybike_v1.git
 cd aboutmybike_v1
 npm install
-npm start
+npm start-webpack
 ```
-
-Make sure webpack is install globally and you can run webpack-dev-server.
+(Make sure webpack is install globally and that you can run webpack-dev-server.)
 
 That's it!
 
-`webpack` compiles the main and vendor JavaScript files, putting them in the dist folder
+Open http://localhost:8080/ in your favorite browser. You'll see a bicycle photo gallery in a responsive grid view. With every file change the ES6 code is transpiled to ES5 AND the page is reloaded.
 
-## Development with hot-reloading
+(Static sample bikes will appear in a grid view. Later we'll get real app data from another source.)
 
-We can still use hot-reloading but note that the compiled files may need to be moved to the root folder -- for what reason I don't recall, but the webpack server had issues with the built files in /dist. Comment out `path: dist` (module.export.output) in /webpack.config.js.
+The React components live in `aboutmybike_v1/src/js/components`.
 
-```
-npm start
-```
+# CSS development
 
-Open http://localhost:8080/ in your favorite browser. With every file change the ES6 code is transpiled to ES5 AND the page is reloaded.
+The style sheets are currently manually compiled with the `npm run build-css` command in the setup above. Sorry but for now the CSS is not automatically rebuilt with changes. :(
 
-The style sheets are currently manually compiled with the `npm run build-css` command in the setup above. Sorry but for now the CSS is not automatically rebuilt with changes.
+Custom css is added to `aboutmybike_v1/src/scss`, including Sass utilities and variables. CSS overrides go in main.scss.
 
 # Running the Express server
 
@@ -35,9 +32,6 @@ DEBUG=express:* node ./bin/www
 ```
 
 Open http://localhost:3000/ in your favorite browser.
-
-Static sample bikes will appear in a grid view. Later we'll get real app data from another source.
-
 
 ## Installing Postgres for local development
 
