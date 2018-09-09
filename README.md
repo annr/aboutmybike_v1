@@ -20,9 +20,7 @@ The React components live in `aboutmybike_v1/src/js/components`.
 
 # CSS development
 
-The style sheets are currently manually compiled with the `npm run build-css` command in the setup above. Sorry but for now the CSS is not automatically rebuilt with changes. :(
-
-Custom css is added to `aboutmybike_v1/src/scss`, including Sass utilities and variables. CSS overrides go in main.scss.
+Styles are not hot-reloaded but instead are manually compiled with the `npm run build-css` command. Develop styles in `aboutmybike_v1/src/scss/`
 
 # Running the Express server
 
@@ -48,7 +46,7 @@ I use Postico because it's helpful to have a GUI sometimes. https://eggerapps.at
 
 ## Setting up the database
 
-Using "Inialize" with the Postgres app will great a server with your username -- you did this above. When you open the postgres command line it will default to the server generated with the current username, so you'll see something like `ann=# `.
+Using "Inialize" with the Postgres app will create a server with your username -- you did this above. When you open the postgres command line it will default to the server generated with the current username, so you'll see something like `ann=# `.
 
 We don't care too much about who will be the owner of the database since it will be used for local dev only.
 
@@ -64,20 +62,14 @@ cd ~/Sites/aboutmybike/db/
 psql amb < ./restore.sql
 ```
 
-This will be changed very soon, but for the next few weeks we'll be using fake data which has been added to the database and then exported as JSON. The inserts for the test data are in the root directory in a file called test-data.sql.
+This will change, but for now fake data which has been added to the database and then exported as JSON. The inserts for the test data are in aboutmybike_v1/test-data.sql.
 
 ```
 psql amb < ./test-data.sql
 ```
 
-# Notes
+## To-do
 
-## CSS
-
-We upgraded to Bootstrap 4 and Sass recently. On my environment I need to downgrade to Node v4.4.0 in order to build the CSS with SASS. You probably don't have to do this.
-
-```
-nvm install v4.4.0
-nvm use 4
-npm run build-css
-```
+- [ ] Update React component to use more elegant styles
+- [ ] Fix (Update) Router so that there is no # in the URL.
+- [ ] Simplify API backend -- do you really need RMDBS?

@@ -8,12 +8,19 @@
 }
 
 body {
-  padding-top: 5rem;
+  padding-top: 2rem;
 }
 
 .generic-container {
-  padding: 3rem 1.5rem;
-  margin: 0 auto;
+  width: 90%;
+  margin: 1rem auto 3rem;
+}
+
+.bike-photo-wrapper {
+  background-color: #ccc;
+  margin: 1em 0 2em;
+  text-align: center;
+  overflow: hidden;
 }
 
 .add-bike-form {
@@ -25,6 +32,10 @@ body {
   cursor: pointer;
 }
 
+.photo-upload{
+  text-align: center;
+}
+
 input[type="radio"] {
   margin: 0 1em;
   font-size: 1.4rem;
@@ -32,6 +43,10 @@ input[type="radio"] {
 
 input[type="file"].form-control-file {
   display: none;
+}
+
+footer {
+  font-size: smaller;
 }
 
 .preview-bike-photo-wrapper {
@@ -53,7 +68,8 @@ legend {
 }
 
 nav {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid #aaa;
 }
 
 .custom-file-upload {
@@ -79,12 +95,12 @@ dl.bike-details dt {
   box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
 }
 
+.card {
+  margin-bottom: 1.5em;
+}
 
-.card-title {
-  width: 100%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.card-block {
+  padding: 1em;
 }
 
 .card-photo-wrapper {

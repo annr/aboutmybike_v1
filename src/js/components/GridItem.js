@@ -14,7 +14,7 @@ class GridItem extends React.Component {
             </Link>
           </div>
           <div className="card-block">
-            <h4 className="card-title">{this.props.brand} {this.props.model}</h4>
+            <h5 className="card-title">{this.props.brand} {this.props.model}</h5>
             <p className="card-text"></p>
             <Link to={link}>View Bike</Link>
           </div>

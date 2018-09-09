@@ -13,6 +13,7 @@ class Grid extends React.Component {
   componentDidMount() {
     var _self = this;
     _self.setState({ results: staticBikes.Bikes });
+    // removed jQuery so we'll have to make this request to the API another way.
     /*
         $.ajax({
           url: "/api/bikes",

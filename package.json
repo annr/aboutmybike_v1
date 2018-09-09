@@ -6,8 +6,7 @@
     "start": "DEBUG=express:* node ./bin/www",
     "start-webpack": "webpack-dev-server --inline --content-base .",
     "test": "test",
-    "build-css": "node-sass --output-style expanded -o dist/css src/scss",
-    "watch": "webpack -- --watch"
+    "build-css": "node-sass --output-style expanded -o dist/css src/scss"
   },
   "repository": {
     "type": "git",
@@ -40,6 +39,7 @@
     "babel-polyfill": "^6.13.0",
     "bluebird": "^3.4.7",
     "body-parser": "~1.15.1",
+    "bootstrap": "^4.1.3",
     "cookie-parser": "~1.4.3",
     "debug": "~2.6.9",
     "express": "~4.14.0",

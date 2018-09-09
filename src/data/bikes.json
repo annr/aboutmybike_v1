@@ -39,7 +39,7 @@
         {
             "id": 5,
             "style": "fat bike",
-            "brand": "State Bicycle Company",
+            "brand": "State Bicycle",
             "model": "Megalith",
             "color": "yellow+mint+red",
             "brakes": "disc",
@@ -52,7 +52,7 @@
             "id": 6,
             "style": "bmx",
             "brand": "Mongoose",
-            "model": "Custon Trials Bike",
+            "model": "Custom Trials",
             "color": "silver+gold",
             "brakes": "disc",
             "speeds": 1,
