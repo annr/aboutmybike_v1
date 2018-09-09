@@ -11,11 +11,11 @@ var pgp = require('pg-promise')(options);
 
 // AWS:
 connectionObject = {
-    host: 'ambdbinstance.crufdsximznc.us-west-1.rds.amazonaws.com',
-    port: 5432,
-    database: 'amb',
-    user: 'arobson',
-    password: 'h34rt4nn71'
+  host: 'ambdbinstance.crufdsximznc.us-west-1.rds.amazonaws.com',
+  port: 5432,
+  database: 'amb',
+  user: 'arobson',
+  password: 'xxxxx'
 };
 
 var db = pgp(connectionObject);

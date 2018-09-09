@@ -1,4 +1,5 @@
 import React from 'react';
+//import bikeData from '../../data/bikes';
 const GridItem = require('./GridItem');
 
 class Grid extends React.Component {
@@ -8,19 +9,18 @@ class Grid extends React.Component {
     this.state.results = [];
   }
 
-  componentDidMount() {
-    var _self = this;
-    $.ajax({
-       url: "/api/bikes",
-       success: function(data)
-       {
-         _self.setState({results:data.data});
-       }
-     });
-  }
+  // componentDidMount() {
+  //   var _self = this;
+  //   $.ajax({
+  //     url: "/api/bikes",
+  //     success: function (data) {
+  //       _self.setState({ results: data.data });
+  //     }
+  //   });
+  // }
 
   render() {
-    return(
+    return (
       <div className="row">
         {this.state.results.map((el) => {
           return (

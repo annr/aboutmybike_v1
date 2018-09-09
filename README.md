@@ -1,55 +1,19 @@
-
-# Setting up the Project
-
-First you'll need [Node.js](https://nodejs.org) and the package manager
-that comes with it: [npm](https://www.npmjs.com/).
-
-(You might have these installed already.)
-
-```
-which npm
-which node
-```
-To be on the safe side, I'd get Node 6+
-
-Installing npm will probably look something like this:
-
-```
-curl -L https://www.npmjs.com/install.sh | sh
-```
+# Example web app built with React and including a simple API
 
 ## Clone the repo
 
 ```
 git clone https://github.com/annr/aboutmybike.git
-# note: if you use an ssh key it may be
-# `git clone git@github.com:annr/aboutmybike.git`
-cd aboutmybike
+cd aboutmybike_v1
 npm install
-npm install webpack webpack-dev-server -g
-npm run build-css
-webpack
+npm start
 ```
 
-`webpack` just compiles the main and vendor JavaScript files, putting them in the dist folder. The webapp main pages -- landing (home) page, upload and detail pages --  may soon be independent of those files, because they are too big, heavy and the app does not require for such state management yet.
+Make sure webpack is install globally and you can run webpack-dev-server.
 
-```
-DEBUG=express:* node ./bin/www
-```
+That's it!
 
-Open http://localhost:3000/ in your favorite browser.
-
-You have not populated the database with any bikes so you won't see any on the home page, which is currently a gallery view. You'll do that under "Installing Postgres..." below. The Bootstrap template should be working, however. You'll see a black responsive header bar.
-
-There is no hot-reloading so for, Therefore, when a change is made, the server must be halted, `webpack` run again, and the express server restarted:
-
-```
-^C
-webpack
-DEBUG=express:* node ./bin/www
-```
-
-Why no hot-reloading? Because it's not easy to get an Express web server using HMR. It's easier when you have webpack run the web server too. The reason I'm using Express  is so that the API can live within the same webapp. If I recall correctly I did this, not for the convenience, but in order to avoid cross-domain problems.
+`webpack` compiles the main and vendor JavaScript files, putting them in the dist folder
 
 ## Development with hot-reloading
 
@@ -62,6 +26,18 @@ npm start
 Open http://localhost:8080/ in your favorite browser. With every file change the ES6 code is transpiled to ES5 AND the page is reloaded.
 
 The style sheets are currently manually compiled with the `npm run build-css` command in the setup above. Sorry but for now the CSS is not automatically rebuilt with changes.
+
+# Running the Express server
+
+An express web server is also available, and required to avoid cross-domain problems when using the aboutmybike_v1 API.
+```
+DEBUG=express:* node ./bin/www
+```
+
+Open http://localhost:3000/ in your favorite browser.
+
+Static sample bikes will appear in a grid view. Later we'll get real app data from another source.
+
 
 ## Installing Postgres for local development
 

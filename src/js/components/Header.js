@@ -4,7 +4,7 @@ const Link = require('react-router').Link;
 class Header extends React.Component {
   render() {
     return (
-      <nav className="navbar navbar-fixed-top navbar-dark bg-inverse">
+      <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <Link className="navbar-brand" to="/">About My Bike</Link>
         <ul className="nav navbar-nav">
           <li className="nav-item">

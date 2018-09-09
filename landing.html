@@ -1,68 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>About My Bike</title>
-    <link rel="stylesheet" media="all" href="dist/landing.css" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
- <body class="default-primary-color text-primary-color">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>About My Bike</title>
+  <link rel="stylesheet" media="all" href="./public/css/landing.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body class="default-primary-color text-primary-color">
 
   <div class="wrapper">
 
     <div class="row">
 
-    <div class="main">
+      <div class="main">
 
-    <img src="dist/images/logo.png" class="logo" width="295" height="53" alt="About My Bike">
-   
-
-    <form action="#" enctype="multipart/form-data" method="post">
-
-      <label class="textfield">
-        <input type="email" name="email" id="signup_email" required="true">
-        <span class="textfield__label">Your email</span>
-        <!--<span class="textfield__label">Your email (we won't share it)</span>-->
-      </label>
-
-    
-      <label class="custom-file-upload">
-    <input type="file" name="image" />
-    Include optional photo of your bike
-</label>
-
- 
-
-      <button type="submit" name="submit" class="amb-early-access-submit btn accent-color"><span>Alert me when site is ready</span></button>
-      &nbsp;<div class="submit-message"></div>
-    </form>
+        <img src="dist/images/logo.png" class="logo" width="295" height="53" alt="About My Bike">
 
 
-    <footer class="dark-primary-color-text"><small>&copy;2016 AboutMyBike.com</small></footer>
+        <form action="#" enctype="multipart/form-data" method="post">
 
+          <label class="textfield">
+            <input type="email" name="email" id="signup_email" required="true">
+            <span class="textfield__label">Your email</span>
+            <!--<span class="textfield__label">Your email (we won't share it)</span>-->
+          </label>
+
+
+          <label class="custom-file-upload">
+            <input type="file" name="image" />
+            Include optional photo of your bike
+          </label>
+
+
+
+          <button type="submit" name="submit" class="amb-early-access-submit btn accent-color"><span>Alert me when site
+              is ready</span></button>
+          &nbsp;<div class="submit-message"></div>
+        </form>
+
+
+        <footer class="dark-primary-color-text"><small>&copy;2016 AboutMyBike.com</small></footer>
+
+      </div>
+
+    </div>
   </div>
+  <script>
 
-</div>
-</div>
-<script>
+    document.addEventListener("DOMContentLoaded", function (event) {
 
-document.addEventListener("DOMContentLoaded", function(event) { 
+      $(document).ready(function () {
 
-  $(document).ready(function() {
-
-    $('#early-access-request').click(function() {
-    if($('#bike-photo-upload').css('visibility') === 'visible') {
-        $('#bike-photo-upload').css('visibility', 'hidden');
-    } else {
-        $('#bike-photo-upload').css('visibility', 'visible');
-      }
+        $('#early-access-request').click(function () {
+          if ($('#bike-photo-upload').css('visibility') === 'visible') {
+            $('#bike-photo-upload').css('visibility', 'hidden');
+          } else {
+            $('#bike-photo-upload').css('visibility', 'visible');
+          }
+        });
+      });
     });
-  });
-});
 
-</script>
-<script src="script.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  </script>
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
 </body>
+
 </html>
