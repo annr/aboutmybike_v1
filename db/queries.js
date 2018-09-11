@@ -22,11 +22,11 @@ connectionString = 'postgres://localhost:5432/amb';
 
 // AWS:
 connectionObject = {
-    host: 'ambdbinstance.crufdsximznc.us-west-1.rds.amazonaws.com',
-    port: 5432,
-    database: 'amb',
-    user: 'arobson',
-    password: 'h34rt4nn71'
+  host: 'ambdbinstance.crufdsximznc.us-west-1.rds.amazonaws.com',
+  port: 5432,
+  database: 'amb',
+  user: 'arobson',
+  password: 'xxxxx'
 };
 
 var db = pgp(connectionString || connectionObject);
@@ -68,13 +68,13 @@ function getSingleBike(req, res, next) {
 function createBike(req, res, next) {
   var previewPath = req.body.preview_path;
   db.one('insert into bike(user_id, style, brand, model) ' +
-      'values($1, $2, $3, $4) returning id', [parseInt(req.body.user_id), req.body.style, req.body.brand, req.body.model])
+    'values($1, $2, $3, $4) returning id', [parseInt(req.body.user_id), req.body.style, req.body.brand, req.body.model])
     .then(function (data) {
       var bikeId = data.id;
       var newDir = 'dist/images/mock/';
       var extension = previewPath.split('.')[1];
-      var newPath = newDir+data.id+'.'+extension;
-      fs.rename(previewPath, newPath, function() {
+      var newPath = newDir + data.id + '.' + extension;
+      fs.rename(previewPath, newPath, function () {
         console.log('successfully moved preview image');
       });
       res.status(200)
@@ -91,7 +91,7 @@ function createBike(req, res, next) {
 function updateBike(req, res, next) {
   db.none('update bike set style=$1, brand=$2, model=$3, nickname=$4 where id=$5',
     [req.body.style, req.body.brand, req.body.model,
-      req.body.nickname, parseInt(req.params.id)])
+    req.body.nickname, parseInt(req.params.id)])
     .then(function () {
       res.status(200)
         .json({

@@ -1,5 +1,5 @@
 const React = require('react');
-const Link = require('react-router').Link;
+import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   render() {
@@ -17,8 +17,4 @@ class Header extends React.Component {
 
 }
 
-module.exports = Header;
-
-// <li className="nav-item active">
-//   <Link className="nav-link" to="/">Home <span className="sr-only">(current)</span></Link>
-// </li>
+export default Header;

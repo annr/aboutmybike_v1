@@ -7,9 +7,12 @@ module.exports = {
     vendor: ["jquery", "lodash", "bootstrap", "react", "react-dom"]
   },
   output: {
-    //never use dist here until you figure out why it breaks hmr
-    path: "dist",
-    filename: "main.bundle.js"
+    path: path.join(__dirname, 'dist'),
+    filename: 'main.bundle.js'
+  },
+  devServer: {
+    publicPath: '/dist/',
+    historyApiFallback: true
   },
   module: {
     loaders: [
